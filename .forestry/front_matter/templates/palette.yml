@@ -1,0 +1,26 @@
+---
+label: Palette
+hide_body: true
+fields:
+- type: field_group
+  name: sass
+  label: SASS
+  fields:
+  - type: color
+    name: accent1
+    label: accent 1
+    config:
+      color_format: Hex
+  - type: color
+    name: accent2
+    label: accent 2
+    config:
+      color_format: Hex
+- type: text
+  name: type
+  label: Object Type
+  description: The type of the object
+  hidden: true
+  default: palette
+  config:
+    required: true

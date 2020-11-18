@@ -1,0 +1,82 @@
+---
+label: Site Configuration
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: Title
+  description: Site title
+  config:
+    required: true
+- type: text
+  name: description
+  label: Site Description
+  description: The default site description used in meta data.
+- type: select
+  name: palette
+  label: Palette
+  description: The palette of the theme.
+  default: blue
+  config:
+    source:
+      type: custom
+    options:
+    - blue
+    - green
+    - navy
+    - violet
+- type: field_group
+  name: palettes
+  label: Palettes
+  hidden: true
+  fields:
+  - type: field_group
+    name: blue
+    label: Blue
+    fields:
+    - type: include
+      name: include_palette
+      label: Palette
+      template: palette
+  - type: field_group
+    name: green
+    label: Green
+    fields:
+    - type: include
+      name: include_palette
+      label: Palette
+      template: palette
+  - type: field_group
+    name: navy
+    label: Navy
+    fields:
+    - type: include
+      name: include_palette
+      label: Palette
+      template: palette
+  - type: field_group
+    name: violet
+    label: Violet
+    fields:
+    - type: include
+      name: include_palette
+      label: Palette
+      template: palette
+- type: field_group
+  name: header
+  label: Header Configuration
+  fields:
+  - type: include
+    name: include_header
+    label: Header Configuration
+    template: header
+- type: field_group
+  name: footer
+  label: Footer Configuration
+  fields:
+  - type: include
+    name: include_footer
+    label: Footer Configuration
+    template: footer
+pages:
+- site-metadata.json
